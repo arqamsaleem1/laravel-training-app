@@ -1,0 +1,676 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --primary : #fff;
+    --secondary : #1c1d1f;
+    --text : #000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container-new {
+    max-width: 1140px;
+    padding: 50px 0px;
+}
+.row {
+    display: flex;
+}
+
+.row .col-md-8 {
+    width: 60%;
+}
+.row .col-md-4 {
+    width: 40%;
+}
+.row .col-md-9 {
+    width: 70%;
+}
+.row .col-md-3 {
+    width: 30%;
+}
+/*** Header Section ***/
+h2{
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+    padding: 10px 0px;
+}
+header {
+    box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
+    z-index: 1010;
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 14px;
+}
+.header-inner {
+    display: flex;
+    align-items: center;
+}
+.header-inner > div {
+    padding: 0 1.2rem;
+}
+.header-inner .menu-btn {
+    padding: 1.5rem 0px;
+    display: inline-block;
+}
+.header-inner span.logo {
+    font-size: 20px;
+    font-weight: 600;
+}
+.header-inner > .search-bar {
+    flex-grow: 1;
+}
+.search-input input {
+    width: 100%;
+    display: inline-block;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    min-width: 18rem;
+}
+
+.search-input {
+    padding: 10px 30px;
+    border: 1px solid #1c1d1f;
+    border-radius: 9999px;
+    background-color: #f7f9fa;
+}
+
+.search-input input[type="text"]:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+a.btn.btn-outlined {
+    padding: 5px 20px 8px;
+    display: inline-block;
+    color: #1c1d1f;
+    background-color: transparent;
+    border: 1px solid #1c1d1f;
+    font-weight: 600;
+    line-height: 1.5;
+}
+a.btn.btn-contained {
+    padding: 5px 20px 8px;
+    display: inline-block;
+    color: #fff;
+    background-color: #1c1d1f;
+    border: 1px solid #1c1d1f;
+    font-weight: 600;
+    line-height: 1.5;
+}
+.cart i {
+    font-size: 20px !important;
+}
+.header-inner .dropdown {
+    position: absolute;
+    z-index: 9;
+    background-color: #fff;
+    top: 100%;
+    display: none;
+    height: 80vh;
+    width: 200px;
+}
+.header-inner .dropdown ul {
+    padding: 15px 0px 15px 15px;
+}
+.header-inner .menu-item {
+    position: relative;
+}
+.header-inner .cats-menu:hover {
+    cursor: pointer;
+}
+.header-inner .cats-menu:hover .dropdown{
+    display: block;
+}
+.header-inner .dropdown-cat li a {
+    display: inline-block;
+    padding: 5px 50px 5px 0px;
+    width: 100%;
+}
+.header-inner .dropdown-cat li.have-child > a{
+    position: relative;
+}
+.header-inner .dropdown-cat li.have-child > a:after {
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    right: 15px;
+    top: 5px;
+}
+.header-inner .cats-menu ul.sub-menu {
+    position: absolute;
+    left: 100%;
+    background: #fff;
+    width: 100%;
+    top: 0;
+    display: none;
+    height: 80vh;
+    border-left: 1px solid #000;
+}
+.header-inner .dropdown-cat li .sub-menu li a {
+    padding: 5px 10px 5px 0px;
+}
+.header-inner .dropdown-cat li:hover > .sub-menu {
+    display: block;
+}
+.header-inner .menu-item.cart span.cart-total {
+    background-color: #a435f0;
+    padding: 2px 7px;
+    border-radius: 50%;
+    color: #fff;
+    position: absolute;
+    font-size: 12px;
+    font-weight: 500;
+    top: 11px;
+    right: 8px;
+}
+/* .header-inner ul.menu > li {
+    position: relative;
+} */
+/*** Home Banner ***/
+.home-slider .slide {
+    position: relative;
+}
+.home-slider .slide .slide-content {
+    position: absolute;
+    top: 50px;
+    left: 78px;
+    max-width: 428px;
+    padding: 25px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
+}
+.home-slider .slide .slide-content h1 {
+    font-size: 32px;
+    line-height: 1;
+    font-weight: 700;
+    padding-bottom: 15px;
+}
+span.slick-arrow {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    width: 40px;
+    z-index: 99;
+    background: #000;
+    color: #fff;
+    border-radius: 50%;
+    height: 40px;
+    font-size: 28px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
+    transform: translateY(-50%);
+    padding: 20px;
+    cursor: pointer;
+}
+
+.slick-arrow i.fa {
+    display: inline-block;
+}
+
+span.next.slick-arrow {
+    left: auto;
+    right: 16px;
+}
+
+/*** Categories slider area ***/
+.cats-slider-area {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.cat-tabs-area {
+    padding: 30px 15px;
+}
+.cats-slider-area > h2, .cats-slider-area > p {
+    padding-left: 15px;
+}
+.cat-tabs {
+    padding-bottom: 15px;
+}
+.cat-tabs-content {
+    border: 1px solid #d1d7dc;
+    padding: 15px 15px;
+}
+.cats-slider-area .course-item {
+    padding: 30px 15px;
+}
+.cats-slider-area .cat-tabs li {
+    display: inline-block;
+}
+.cats-slider-area .cat-tabs li > a {
+    padding-right: 15px;
+    color: #6a6f73;
+    font-size: 16px;
+    font-weight: 600;
+}
+.cats-slider-area .cat-tabs li > a.active {
+    color: #1c1d1f;
+}
+.cats-slider-area span.previous.slick-arrow {
+    left: 0;
+}
+.cats-slider-area span.next.slick-arrow {
+    right: 0;
+}
+.cat-tabs-content .cat-tab-content {
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+.cat-tabs-content .cat-tab-content.active {
+    height: auto;
+}
+.course-slide-content h4 {
+    color: #1c1d1f;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+}
+.course-slide-content > p {
+    font-size: 14px;
+    line-height: 24px;
+}
+.course-slide-content span.price {
+    font-size: 14px;
+    font-weight: 900;
+}
+
+/****Category Course listing page****/
+.courses-page h2 {
+    text-align: center;
+    padding: 20px 0px 50px;
+}
+.courses-page .row {
+    display: flex;
+}
+
+.courses-page .row .col-4 {
+    width: 30%;
+}
+
+.courses-page .row .col-8 {
+    width: 70%;
+}
+.courses-page .course-item {
+    display: flex;
+    border-bottom: 1px solid #d1d7dc;
+    padding: 15px 0px;
+}
+
+.courses-page .course-item .course-img {
+    width: 20%;
+    padding-left: 0;
+}
+
+.courses-page .course-item .course-item-content {
+    width: 70%;
+}
+
+.courses-page .course-item .course-item-price {
+    width: 10%;
+}
+.courses-page .course-item h3 {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+}
+
+.courses-page .course-item .course-item-content p {
+    color: #1c1d1f;
+    font-size: 14px;
+    line-height: 18px;
+}
+.courses-page .course-item > div {
+    padding: 5px 10px;
+}
+.courses-page .course-item .course-item-price {
+    font-weight: 900;
+}
+
+/*** Course Detail page ***/
+.single-course-page .inner-banner{
+    background-color: #1c1d1f;
+    color: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.inner-banner h1 {
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 45px;
+}
+
+.inner-banner p {
+    font-size: 18px;
+    line-height: 26px;
+}
+.single-course-content .container {
+    max-width: 1100px;
+    padding: 50px 0px;
+}
+
+.course-section-tab {
+    border-top: 1px solid #d1d7dc;
+    border-left: 1px solid #d1d7dc;
+    border-right: 1px solid #d1d7dc;
+}
+/* Style the buttons that are used to open and close the accordion panel */
+.single-course-content .accordion {
+    background-color: #f7f9fa;
+    color: #444;
+    cursor: pointer;
+    padding: 10px 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    
+}
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.single-course-content .accordion.active, .single-course-content .accordion:hover {
+    background-color: #f7f9fa;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.single-course-content .panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}
+.single-course-content ul.lessons-list a span {
+    border: 1px solid #000;
+    border-radius: 50%;
+    background-color: #000;
+    padding: 0px 6px 0px;
+    display: inline-block;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    line-height: 11px;
+}
+.single-course-content ul.lessons-list a {
+    padding: 10px 0px;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 16px;
+}
+.single-course-content ul.lessons-list a span i.fas.fa-play {
+    color: #fff;
+    font-size: 6px;
+    line-height: 0.5;
+}
+.addtocart-wrap .addtocart-content {
+    box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
+    margin-left: 30px;
+}
+.addtocart-wrap .cart-content {
+    padding: 20px;
+}
+.addtocart-wrap .cart-content span.price {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 50px;
+}
+.addtocart-wrap .cart-content .course-price {
+    padding: 0px 0px 15px;
+}
+.purchase-btn {
+    background-color: #a435f0;
+    color: #fff;
+    padding: 15px 65px 17px;
+    margin: 0 auto;
+    display: inline-block;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+}
+.purchase-btn:hover {
+    background-color: #000;
+}
+/**Course Player page**/
+.courses-player {
+    background-image: var(--primary);
+    font-family: sans-serif;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+.courses-player .inner-container {
+    max-width: 100vw;
+    display: grid;
+    grid-template-columns: 1.8fr 1.2fr;
+    gap: 1rem;
+    padding: .5rem 1rem;
+    text-transform: capitalize;
+}
+@media screen and (max-width: 990px) {
+    .courses-player .inner-container {
+        grid-template-columns: 1fr;
+    }
+}
+.courses-player .main-video, .courses-player .video-playlist {
+    width: 100%;
+}
+.courses-player .main-video .title {
+    margin-top: 1rem;
+}
+.courses-player .video-playlist .title {
+    padding-left: 1rem;
+}
+.courses-player .video-playlist > p {
+    padding: 1rem;
+    color: var(--secondary);
+}
+.courses-player .video-playlist .videos{
+    height: 70%;
+    overflow-y: auto;
+}
+.courses-player .video-playlist .videos::-webkit-scrollbar {
+    width: .4rem;
+    border-radius: .4rem;
+    background-color: #0005;
+}
+.courses-player .video-playlist .videos::-webkit-scrollbar-thumb {
+    border-radius: .4rem;
+    background-color: #fff;
+}
+
+.courses-player .video-playlist .videos .video {
+    position: relative;
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    margin-top: .1rem;
+    cursor: pointer;
+    border-radius: .5rem;
+}
+
+.courses-player .video-playlist .videos .video:hover {
+    background-color: #0003;
+}
+
+.courses-player .video-playlist .videos .video.active {
+    background-color: #0003;
+    color: var(--secondary);
+}
+
+.courses-player .main-video video {
+    width: 100%;
+    border-radius: .5rem;
+}
+
+.courses-player .video img {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.5rem;
+    height: 1.5rem;
+    filter: invert(100%);
+}
+.courses-player .video-playlist .videos .video.active img {
+    filter: invert(100%) sepia(100%) saturate(2000%) hue-rotate(360deg);
+}
+.courses-player .video p {
+   margin-left: 2.5rem;
+}
+.courses-player .video h3 {
+    width: 23rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font: 100 1rem sans-serif;
+    padding: 0 .5rem;
+}
+section.video-playlist h3.title {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 28px;
+}
+
+.main-video h1.title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+}
+/* Style the buttons that are used to open and close the accordion panel */
+.courses-player .accordion {
+    background-color: #f7f9fa;
+    color: #444;
+    cursor: pointer;
+    padding: 10px 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    font-weight: 600;
+}
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.courses-player .accordion.active, .courses-player .accordion:hover {
+    background-color: #f7f9fa;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.courses-player .panel {
+    padding: 0;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}
+.courses-player ul.lessons-list a span {
+    border: 1px solid #000;
+    border-radius: 50%;
+    background-color: #000;
+    padding: 0px 6px 0px;
+    display: inline-block;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    line-height: 11px;
+    vertical-align: middle;
+}
+.courses-player ul.lessons-list a {
+    padding: 10px 18px;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 16px;
+}
+.courses-player ul.lessons-list a span i.fas.fa-play {
+    color: #fff;
+    font-size: 6px;
+    line-height: 0.5;
+    padding: 8px 0px 0px 1px;
+    display: inline-block;
+}
+.courses-player ul.lessons-list li.current-item {
+    background: #d1d7dc;
+}
+/** Cart Page **/
+.cart-page .course-item {
+    display: flex;
+    border-bottom: 1px solid #d1d7dc;
+    padding: 15px 0px;
+}
+
+.cart-page .course-item .course-img {
+    width: 20%;
+    padding-left: 0;
+}
+
+.cart-page .course-item .course-item-content {
+    width: 70%;
+}
+
+.cart-page .course-item .course-item-price {
+    width: 10%;
+}
+.cart-page .course-item h3 {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+}
+.cart-page .course-item .course-item-content p {
+    color: #1c1d1f;
+    font-size: 14px;
+    line-height: 18px;
+}
+.cart-page .course-item > div {
+    padding: 5px 10px;
+}
+.cart-page .course-item .course-item-price {
+    font-weight: 900;
+}
+.cart-sidebar-wrap {
+    padding: 70px 20px 30px 80px;
+}
+.cart-sidebar-wrap h3.total-price,
+.checkout-sidebar-content h3 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 50px;
+    padding-bottom: 30px;
+}
+/*** Footer Section ***/
+footer {
+    padding-left: 20px;
+    padding-right: 20px;
+    background: #1c1d1f;
+    border-top: 1px solid #3e4143;
+    color: #fff;
+    padding-top: 2.4rem;
+}
+
+footer li a {
+    width: 100%;
+    padding: 0.2rem 0;
+    display: inline-block;
+    font-size: 14px;
+}
+.footer-bottom {
+    padding: 6.4rem 0 3.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.f-logo span.logo {
+    font-size: 20px;
+    font-weight: 600;
+}
+
