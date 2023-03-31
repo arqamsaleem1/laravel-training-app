@@ -6,6 +6,7 @@ use App\Http\Controllers\CourseController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StripePaymentController;
+use App\Http\Controllers\NewsLetterController;
 use App\Jobs\SendMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -31,6 +32,11 @@ Route::get('/test', function(){
     dispatch( new SendMail );
     //return view('test');
 });
+Route::get('newsletter',[NewsLetterController::class, 'index']);
+//Route::get('newsletter-stats',[NewsLetterController::class, 'showStats']);
+Route::get('newsletter-stats',[NewsLetterController::class, 'sendEmailToSubscribers']);
+Route::post('newsletter/store',[NewsLetterController::class, 'store']);
+
 
 Route::middleware('auth')->group(function () {
     Route::controller(CourseController::class)->group(function () {
